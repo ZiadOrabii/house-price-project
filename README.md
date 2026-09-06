@@ -73,17 +73,6 @@ jupyter notebook house_price_model.ipynb
 
 This writes `house_price.pkl` and `locations.json` into both `notebooks/` and `backend/app/models/`.
 
-### Model Metrics (test set)
-
-| Model | MAE | RMSE | R² |
-|---|---|---|---|
-| LinearRegression | TODO | TODO | TODO |
-| RandomForest | TODO | TODO | TODO |
-| GradientBoosting | TODO | TODO | TODO |
-| KNN | TODO | TODO | TODO |
-
-**Winner:** RandomForest — *TODO: one-paragraph justification citing the numbers above.*
-
 ## Backend Setup
 
 ```powershell
@@ -160,17 +149,6 @@ curl -X POST http://localhost:8000/predict `
 ```json
 {"predicted_price": 8500000.0}
 ```
-
-Unrecognized `location` values are mapped to `"other"` server-side. Invalid input (e.g. `carpet_area_sqft <= 0`) returns `422`.
-
-## Screenshots
-
-*TODO: add screenshots of the home form and result page.*
-
-| Home / Form | Result |
-|---|---|
-| ![Home](docs/screenshots/home.png) | ![Result](docs/screenshots/result.png) |
-
 ## Running the Full Stack
 
 1. Backend: `cd backend && python -m uvicorn app.main:app --reload` (port 8000)
